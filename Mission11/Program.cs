@@ -13,7 +13,12 @@ builder.Services.AddDbContext<BookContext>(options =>
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowReact", policy =>
-        policy.WithOrigins("http://localhost:5173")
+        policy.WithOrigins(
+                "http://localhost:5173",
+                "http://localhost:5174",
+                "http://localhost:5175",
+                "https://orange-flower-0f85bf80f.1.azurestaticapps.net"
+            )
             .AllowAnyHeader()
             .AllowAnyMethod());
 });

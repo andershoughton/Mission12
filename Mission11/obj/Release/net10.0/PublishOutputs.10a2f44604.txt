@@ -1,4 +1,5 @@
 /Users/andershoughton/RiderProjects/Mission11/Mission11/publish/Mission11
+/Users/andershoughton/RiderProjects/Mission11/Mission11/publish/publish/publish/publish/web.config
 /Users/andershoughton/RiderProjects/Mission11/Mission11/publish/publish/publish/web.config
 /Users/andershoughton/RiderProjects/Mission11/Mission11/publish/publish/web.config
 /Users/andershoughton/RiderProjects/Mission11/Mission11/publish/appsettings.Development.json
@@ -13,6 +14,11 @@
 /Users/andershoughton/RiderProjects/Mission11/Mission11/publish/publish/publish/Mission11.deps.json
 /Users/andershoughton/RiderProjects/Mission11/Mission11/publish/publish/publish/Mission11.runtimeconfig.json
 /Users/andershoughton/RiderProjects/Mission11/Mission11/publish/publish/publish/Mission11.staticwebassets.endpoints.json
+/Users/andershoughton/RiderProjects/Mission11/Mission11/publish/publish/publish/publish/appsettings.Development.json
+/Users/andershoughton/RiderProjects/Mission11/Mission11/publish/publish/publish/publish/appsettings.json
+/Users/andershoughton/RiderProjects/Mission11/Mission11/publish/publish/publish/publish/Mission11.deps.json
+/Users/andershoughton/RiderProjects/Mission11/Mission11/publish/publish/publish/publish/Mission11.runtimeconfig.json
+/Users/andershoughton/RiderProjects/Mission11/Mission11/publish/publish/publish/publish/Mission11.staticwebassets.endpoints.json
 /Users/andershoughton/RiderProjects/Mission11/Mission11/publish/Mission11.dll
 /Users/andershoughton/RiderProjects/Mission11/Mission11/publish/Mission11.deps.json
 /Users/andershoughton/RiderProjects/Mission11/Mission11/publish/Mission11.runtimeconfig.json

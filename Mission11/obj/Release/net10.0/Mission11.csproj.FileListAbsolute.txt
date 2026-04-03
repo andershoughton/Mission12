@@ -79,3 +79,9 @@
 /Users/andershoughton/RiderProjects/Mission11/Mission11/bin/Release/net10.0/publish/publish/Mission11.deps.json
 /Users/andershoughton/RiderProjects/Mission11/Mission11/bin/Release/net10.0/publish/publish/Mission11.runtimeconfig.json
 /Users/andershoughton/RiderProjects/Mission11/Mission11/bin/Release/net10.0/publish/publish/Mission11.staticwebassets.endpoints.json
+/Users/andershoughton/RiderProjects/Mission11/Mission11/bin/Release/net10.0/publish/publish/publish/web.config
+/Users/andershoughton/RiderProjects/Mission11/Mission11/bin/Release/net10.0/publish/publish/publish/appsettings.Development.json
+/Users/andershoughton/RiderProjects/Mission11/Mission11/bin/Release/net10.0/publish/publish/publish/appsettings.json
+/Users/andershoughton/RiderProjects/Mission11/Mission11/bin/Release/net10.0/publish/publish/publish/Mission11.deps.json
+/Users/andershoughton/RiderProjects/Mission11/Mission11/bin/Release/net10.0/publish/publish/publish/Mission11.runtimeconfig.json
+/Users/andershoughton/RiderProjects/Mission11/Mission11/bin/Release/net10.0/publish/publish/publish/Mission11.staticwebassets.endpoints.json

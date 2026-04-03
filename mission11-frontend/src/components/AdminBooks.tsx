@@ -38,7 +38,7 @@ function AdminBooks() {
     }, []);
 
     function fetchBooks() {
-        fetch('https://andersmission13-axd6egevbqf0cmg6.eastus-01.azurewebsites.net')
+        fetch('https://andersmission13-axd6egevbqf0cmg6.eastus-01.azurewebsites.net/api/books?pageSize=100')
             .then(res => res.json())
             .then(data => setBooks(data.books));
     }
