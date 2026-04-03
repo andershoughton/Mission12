@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useCart } from '../context/CartContext';
+import { useNavigate } from 'react-router-dom';
+
 
 interface Book {
   bookId: number;
@@ -22,8 +24,8 @@ function BookList({ onGoToCart, initialPage = 1 }: { onGoToCart: (currentPage: n
   const [categories, setCategories] = useState<string[]>([]);
   const [selectedCategory, setSelectedCategory] = useState('');
   const [addedMessage, setAddedMessage] = useState('');
-
   const { cart, addToCart } = useCart();
+  const navigate = useNavigate();
   const totalPages = Math.ceil(totalBooks / pageSize);
 
   // total items in cart for the summary badge
@@ -32,7 +34,7 @@ function BookList({ onGoToCart, initialPage = 1 }: { onGoToCart: (currentPage: n
 
   // fetch categories once on load
   useEffect(() => {
-    fetch('http://localhost:5169/api/books/categories')
+    fetch('https://andersmission13-axd6egevbqf0cmg6.eastus-01.azurewebsites.net')
       .then(res => res.json())
       .then(data => setCategories(data))
       .catch(err => console.error('Error fetching categories:', err));
@@ -40,7 +42,7 @@ function BookList({ onGoToCart, initialPage = 1 }: { onGoToCart: (currentPage: n
 
   // fetch books whenever page, size, sort, or category changes
   useEffect(() => {
-    const url = `http://localhost:5169/api/books?pageNum=${pageNum}&pageSize=${pageSize}&sortOrder=${sortOrder}&category=${selectedCategory}`;
+    const url = `https://andersmission13-axd6egevbqf0cmg6.eastus-01.azurewebsites.net/api/books?pageNum=${pageNum}&pageSize=${pageSize}&sortOrder=${sortOrder}&category=${selectedCategory}`;
     fetch(url)
       .then(res => res.json())
       .then(data => {
@@ -67,27 +69,31 @@ function BookList({ onGoToCart, initialPage = 1 }: { onGoToCart: (currentPage: n
         <div className="col">
           <h1>Online Bookstore</h1>
         </div>
-        <div className="col-auto">
-          {/* cart summary badge */}
+        <div className="col-auto d-flex gap-2 align-items-center">
           <button
-            className="btn btn-success position-relative"
-            onClick={() => onGoToCart(pageNum)}
+              className="btn btn-success position-relative"
+              onClick={() => { onGoToCart(pageNum); navigate('/cart'); }}
           >
             🛒 Cart
             {cartCount > 0 && (
-              <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                {cartCount}
-              </span>
+                <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+          {cartCount}
+        </span>
             )}
           </button>
           {cartCount > 0 && (
-            <span className="ms-2 text-muted">
-              {cartCount} item{cartCount > 1 ? 's' : ''} — ${cartTotal.toFixed(2)}
-            </span>
+              <span className="ms-2 text-muted">
+        {cartCount} item{cartCount > 1 ? 's' : ''} — ${cartTotal.toFixed(2)}
+      </span>
           )}
+          <button
+              className="btn btn-outline-secondary"
+              onClick={() => navigate('/adminbooks')}
+          >
+            Admin
+          </button>
         </div>
       </div>
-
       {addedMessage && (
           <div className="alert alert-success alert-dismissible fade show" role="alert">
             {addedMessage}

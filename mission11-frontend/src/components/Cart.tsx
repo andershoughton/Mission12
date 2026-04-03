@@ -1,8 +1,9 @@
 import { useCart } from '../context/CartContext';
+import { useNavigate } from 'react-router-dom';
 
-function Cart({ onContinueShopping }: { onContinueShopping: () => void }) {
+function Cart() {
   const { cart, clearCart } = useCart();
-
+  const navigate = useNavigate();
   // calculate total price
   const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
@@ -13,7 +14,7 @@ function Cart({ onContinueShopping }: { onContinueShopping: () => void }) {
       {cart.length === 0 ? (
           <div>
             <p>Your cart is empty.</p>
-            <button className="btn btn-secondary" onClick={onContinueShopping}>
+            <button className="btn btn-secondary" onClick={() => navigate('/')}>
               Back to Books
             </button>
           </div>
@@ -47,7 +48,7 @@ function Cart({ onContinueShopping }: { onContinueShopping: () => void }) {
           </table>
 
           <div className="d-flex gap-2">
-            <button className="btn btn-secondary" onClick={onContinueShopping}>
+            <button className="btn btn-secondary" onClick={() => navigate('/')}>
               Continue Shopping
             </button>
             <button className="btn btn-danger" onClick={clearCart}>
